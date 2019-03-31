@@ -27,7 +27,7 @@ BIENVENIDO <?php echo "CEDULA: ".$_SESSION['idcliente']?><br>
 	<?php
 		include("conexion.php");
 		$conn=conectar();
-		$re=mysqli_query("select * from productos")or die(mysql_error());
+		$re=mysqli_query($conn,"select * from productos")or die(mysql_error());
 		while ($f=mysqli_fetch_array($re)) {
 		?>
 

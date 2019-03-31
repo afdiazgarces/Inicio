@@ -31,7 +31,7 @@ $con=$_POST['contraseña'];
 if(isset($_POST['guardar'])){
 
 $sql="insert into clientes values($id,'$nom','$ape',$tel,'$ema','$con')";
-$resultado=mysqli_query($sql);
+$resultado=mysqli_query($conn,$sql);
 
 }
 
