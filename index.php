@@ -73,7 +73,7 @@ header("Location: menu.php");
 </div>
 
 <div id="nombres">
-<p>ALVARO ANDRES RUBIO</p>
+<p>Andres Felipe Diaz</p>
 </div>
   <script src="js/index.js"></script>
 
