@@ -3,8 +3,8 @@
 function conectar(){
 	
 $usuario="root";
-$clave="";
-$servidor="localhost";
+$clave="password";
+$servidor="mysql";
 $bd="car_compras";
 
 $conn=mysql_connect($servidor,$usuario,$clave) or die ("EXISTE UN ERROR AL CONECTAR!");
