@@ -1,0 +1,193 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Usuarios</title>
+<style>
+
+h1{
+	text-align:center;
+	color:#FFF;
+	font-family: Sans-serif;
+	font-size:36px;
+}
+
+.table{
+	background-color:#FFC;
+	background-color:#ecf0f1;
+	border-radius:15px;
+	box-shadow:4px 4px 5px #999999;
+	font-family: Sans-serif;
+  }
+  
+.input{
+	background-color:#000;
+	color:#FFF;
+	border-radius:7px;
+	font-family: Sans-serif;
+	font-weight:bold;
+	width:90px;
+	height:40px;
+	
+}
+
+body{
+	background-color:#000;
+	font-family: Sans-serif;
+}
+
+
+
+img{
+	margin-top:10px;
+	margin-left:10px;
+	
+}
+
+input{
+	font-family: Sans-serif;
+	font-weight:bold;
+}
+
+
+
+label{
+	color:#F00;
+	font-family:"sans-serif";
+	font-weight:bold;
+	margin-top:40px;
+}
+
+input[type="text"]{
+	height:30px;
+	font-size:18px;
+}
+
+input[type="password"]{
+	height:30px;
+	font-size:18px;
+}
+
+
+
+</style>
+
+<script src="jquery-1.11.2.min.js"> </script>
+<script src="jquery.validate.min.js"> </script>
+
+<script>
+
+$(document).ready(function(e) {
+    
+	$("#formulario").validate({
+		
+		rules:{
+		
+		idcliente:{
+			required:true,
+			number:true	
+		},
+		nombre:"required",
+		apellido:"required",
+		contraseña:{
+			required:true,
+			rangelength:[6,10]
+			
+		},
+		telefono:{
+			required:true,
+			number:true	
+		},
+		email:{
+			required:true,
+			email:true	
+		}
+			
+			
+		},
+		messages:{
+			
+			idcliente:{
+				required:"CAMPO ABLIGATORIO",
+				number:"DEBE SER NUMERICO"				
+				
+			},
+			nombre:"CAMPO ABLIGATORIO",
+			apellido:"CAMPO ABLIGATORIO",
+			telefono:{
+				required:"CAMPO ABLIGATORIO",
+				number:"DEBE SER NUMERICO"				
+				
+			},
+			email:{
+				required:"CAMPO ABLIGATORIO",
+				email:"EJEM@HOTMAIL.COM"				
+				
+			},
+		contraseña:{
+			required:"CAMPO OBLIGATORIO",
+			rangelength:"ENTRE 6 Y 10 DIGITOS"
+			
+		}
+		}
+	});
+		
+		
+	});
+
+</script>
+
+</head>
+
+<body>
+<h1>REGISTRO CLIENTES</h1>
+
+
+<form action="ContenedoraRegistrate.php" method="post" id="formulario">
+
+<table align="center" class="table" width="450">
+  <tr height="50">
+    <td align="center"><b>ID CLIENTE</b></td>
+    <td align="center">
+      <input type="text" name="idcliente"  id="idcliente" > </td>
+      
+  </tr>
+  <tr height="50">
+    <td align="center"><b>NOMBRE</b></td>
+    <td align="center">
+      <input type="text" name="nombre" id="nombre" ></td>
+      <td align="center"><input type="submit" id="guardar" name="guardar" 			 	value="GUARDAR" class="input" ></td>
+  </tr>
+  <tr height="50">
+    <td align="center"><b>APELLIDO</b></td>
+    <td align="center">
+      <input type="text" name="apellido" id="apellido" ></td>
+      <td rowspan="2" align="center">&nbsp;</td>
+  </tr>
+  <tr height="50">
+    <td height="33" align="center"><b>TELEFONO</b></td>
+    <td align="center">
+      <input type="text" name="telefono" id="telefono"></td>
+    </tr>
+  <tr height="50">
+    <td height="33" align="center"><b>EMAIL</b></td>
+    <td align="center">
+      <input type="text" name="email" id="email" ></td>
+      <td align="center"><input type="button" name=""  value="LIMPIAR" id="limpiar" class="input"/></td>
+  </tr>
+  <tr height="50">
+    <td height="33" align="center"><b>CONTRSEÑA</b></td>
+    <td align="center">
+      <input type="password" name="contraseña" id="contraseña"></td>
+    </tr>
+
+</table>
+
+
+</form>
+
+
+
+	
+
+</body>
+</html>
