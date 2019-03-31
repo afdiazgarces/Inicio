@@ -9,7 +9,7 @@ $id=$_POST['idcliente'];
 $clave=$_POST['clave'];
 $sql="select * from clientes where idcliente=$id and clave='$clave'";
 echo $sql;
-$resultado=mysqli_query($sql,$conn);
+$resultado=mysqli_query($sql);
 
 if(mysqli_num_rows($resultado)>0){
 	

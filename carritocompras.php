@@ -20,7 +20,7 @@
 						$nombre="";
 						$precio=0;
 						$imagen="";
-						$re=mysqli_query("select * from productos where idproducto=".$_GET['id'],$conn);
+						$re=mysqli_query("select * from productos where idproducto=".$_GET['id']);
 						while ($f=mysqli_fetch_array($re)) {
 							$nombre=$f['nombre'];
 							$precio=$f['precio'];
@@ -46,7 +46,7 @@
 			$nombre="";
 			$precio=0;
 			$imagen="";
-			$re=i_query("select * from productos where idproducto=".$_GET['id'],$conn);
+			$re=i_query("select * from productos where idproducto=".$_GET['id']);
 			while ($f=mysqli_fetch_array($re)) {
 				$nombre=$f['nombre'];
 				$precio=$f['precio'];
