@@ -9,9 +9,9 @@ $id=$_POST['idcliente'];
 $clave=$_POST['clave'];
 $sql="select * from clientes where idcliente=$id and clave='$clave'";
 echo $sql;
-$resultado=mysql_query($sql,$conn);
+$resultado=mysqli_query($sql,$conn);
 
-if(mysql_num_rows($resultado)>0){
+if(mysqli_num_rows($resultado)>0){
 	
 	session_start();
 	$_SESSION['idcliente']=$_POST['idcliente'];

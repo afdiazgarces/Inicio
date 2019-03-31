@@ -31,7 +31,7 @@ $ema=$_POST['precio'];
 if(isset($_POST['guardar'])){
 
 $sql="insert into productos values('','$nom','$ape','$tel',$ema)";
-$resultado=mysql_query($sql,$conn);
+$resultado=mysqli_query($sql,$conn);
 
 }
 
